@@ -23,7 +23,7 @@ const Home = () => {
     joindate: userData[0].date_of_joining,
   });
   useEffect(() => {
-    axios.get('http://localhost:2410/getLeave/'+userData[0].name)
+    axios.get('https://vr-lms-backend.onrender.com/getLeave/'+userData[0].name)
     .then(result => {
       setLeavedata(result.data)
     }).catch(err => console.log(err))
@@ -68,7 +68,7 @@ const Home = () => {
     // console.log("Number of days:", daysDifference);
 
     // console.log(employee)
-    axios.post('http://localhost:2410/leaveapply', 
+    axios.post('https://vr-lms-backend.onrender.com/leaveapply', 
     {...employee,
     daysDifference : daysDifference
     },

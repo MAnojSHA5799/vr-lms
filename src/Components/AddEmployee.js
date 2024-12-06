@@ -31,7 +31,7 @@ const AddEmployee = () => {
       manager:employee.manager,
     };
      axios
-      .post("http://localhost:2410/addemployee", formData, {
+      .post("https://vr-lms-backend.onrender.com/addemployee", formData, {
         headers: {
           'Content-Type': 'application/json',
         },

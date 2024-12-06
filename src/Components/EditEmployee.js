@@ -17,7 +17,7 @@ const EditEmployee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2410/employee/" + id)
+      .get("https://vr-lms-backend.onrender.com/employee/" + id)
       .then((result) => {
         setEmployee({
           ...employee,
@@ -36,7 +36,7 @@ const EditEmployee = () => {
     e.preventDefault();
     console.log(employee);
     axios
-      .put("http://localhost:2410/edit_employee/" + id, employee)
+      .put("https://vr-lms-backend.onrender.com/edit_employee/" + id, employee)
       .then((result) => {
         if (result.data.Status) {
           navigate("/dashboard/employee");

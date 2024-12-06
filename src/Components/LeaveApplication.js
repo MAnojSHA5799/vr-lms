@@ -11,7 +11,7 @@ const LeaveApplication = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2410/leaves")
+      .get("https://vr-lms-backend.onrender.com/leaves")
       .then((response) => {
         setEmployee(response.data);
       })
@@ -26,7 +26,7 @@ const LeaveApplication = () => {
     };
     axios
       .put(
-        `http://localhost:2410/leave_approve/${id}`,
+        `https://vr-lms-backend.onrender.com/leave_approve/${id}`,
         { data }
       )
       .then((result) => {
@@ -46,7 +46,7 @@ const LeaveApplication = () => {
     };
     axios
       .put(
-        `http://localhost:2410/leave_reject/${id}`,
+        `https://vr-lms-backend.onrender.com/leave_reject/${id}`,
         { data }
       )
       .then((result) => {

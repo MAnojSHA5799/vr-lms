@@ -18,7 +18,7 @@ const EditLeaveForm = () => {
       const navigate = useNavigate()
 
       useEffect(()=> {
-        axios.get('http://localhost:2410/Leave_employee/'+id)
+        axios.get('https://vr-lms-backend.onrender.com/Leave_employee/'+id)
         .then(result => {
             setEmployee({
                 ...employee,
@@ -38,7 +38,7 @@ const EditLeaveForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.put('http://localhost:2410/edit_leave_form/'+id, employee)
+        axios.put('https://vr-lms-backend.onrender.com/edit_leave_form/'+id, employee)
         .then(result => {
             if(result.data.Status) {
                 navigate('/dashboard/leave_applications')

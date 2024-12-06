@@ -12,7 +12,7 @@ const Employee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2410/employee")
+      .get("https://vr-lms-backend.onrender.com/employee")
       .then((response) => {
         setEmployee(response.data);
       })
@@ -23,7 +23,7 @@ const Employee = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:2410/deleteemployee/${id}`)
+      .delete(`https://vr-lms-backend.onrender.com/deleteemployee/${id}`)
       .then((result) => {
         if (result.data.Status) {
           alert("Delete employee successfully");
